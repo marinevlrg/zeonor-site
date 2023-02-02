@@ -12,10 +12,10 @@ class Message1Type extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('prénom')
+            ->add('prenom')
             ->add('nom')
             ->add('email')
-            ->add('téléphone')
+            ->add('telephone')
             ->add('message')
         ;
     }

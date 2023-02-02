@@ -13,7 +13,8 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/contact')]
 class MessageController extends AbstractController
 {
-    #[Route('/', name: 'app_message_index', methods: ['GET'])]
+
+    #[Route('/message_index', name: 'app_message_index', methods: ['GET'])]
     public function index(MessageRepository $messageRepository): Response
     {
         return $this->render('message/index.html.twig', [
@@ -21,7 +22,7 @@ class MessageController extends AbstractController
         ]);
     }
 
-    #[Route('/new', name: 'app_message_new', methods: ['GET', 'POST'])]
+    #[Route('/', name: 'app_message_new', methods: ['GET', 'POST'])]
     public function new(Request $request, MessageRepository $messageRepository): Response
     {
         $message = new Message();
@@ -31,10 +32,10 @@ class MessageController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $messageRepository->save($message, true);
 
-            return $this->redirectToRoute('app_message_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_validation', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('message/new.html.twig', [
+        return $this->renderForm('contact.html.twig', [
             'message' => $message,
             'form' => $form,
         ]);
@@ -45,24 +46,6 @@ class MessageController extends AbstractController
     {
         return $this->render('message/show.html.twig', [
             'message' => $message,
-        ]);
-    }
-
-    #[Route('/{id}/edit', name: 'app_message_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Message $message, MessageRepository $messageRepository): Response
-    {
-        $form = $this->createForm(Message1Type::class, $message);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $messageRepository->save($message, true);
-
-            return $this->redirectToRoute('app_message_index', [], Response::HTTP_SEE_OTHER);
-        }
-
-        return $this->renderForm('message/edit.html.twig', [
-            'message' => $message,
-            'form' => $form,
         ]);
     }
 

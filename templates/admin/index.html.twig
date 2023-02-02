@@ -1,73 +1,8 @@
 {% extends 'base.html.twig' %}
 {% block content %}
-	<div>
-		<h3 class="mt-3">Message pour l'admin :</h3>
-		<table class="table">
-			<thead>
-				<tr>
-					<th>Id</th>
-					<th>Prénom</th>
-					<th>Nom</th>
-					<th>Email</th>
-					<th>Téléphone</th>
-					<th>Message</th>
-					<th>actions</th>
-				</tr>
-			</thead>
-			<tbody>
-				{% for message in messages %}
-					<tr>
-						<td>{{ message.id }}</td>
-						<td>{{ message.prénom }}</td>
-						<td>{{ message.nom }}</td>
-						<td>{{ message.email }}</td>
-						<td>{{ message.téléphone }}</td>
-						<td>{{ message.message }}</td>
-						<td>
-							<a href="{{ path('app_message_show', {'id': message.id}) }}">Voir</a>
-						</td>
-					</tr>
-				{% else %}
-					<tr>
-						<td colspan="7">no records found</td>
-					</tr>
-				{% endfor %}
-			</tbody>
-		</table>
 
-	</div>
-	<div>
-		<h3 class="mt-3">Mes réalisations :</h3>
-		<table class="table">
-			<thead>
-				<tr>
-					<th>Id</th>
-					<th>Name</th>
-					<th>Image</th>
-					<th>Description</th>
-					<th>actions</th>
-				</tr>
-			</thead>
-			<tbody>
-				{% for realisation in realisations %}
-					<tr>
-						<td>{{ realisation.id }}</td>
-						<td>{{ realisation.name }}</td>
-						<td>{{ realisation.image }}</td>
-						<td>{{ realisation.description }}</td>
-						<td>
-							<a class="btn btn-light" href="{{ path('app_realisation_show', {'id': realisation.id}) }}" title="voir la réalisation">Voir</a>
-							<a class="btn btn-warning" href="{{ path('app_realisation_edit', {'id': realisation.id}) }}"title="modifier la réalisation">Modifier</a>
-						</td>
-					</tr>
-				{% else %}
-					<tr>
-						<td colspan="5">no records found</td>
-					</tr>
-				{% endfor %}
-			</tbody>
-		</table>
-		<a class="btn btn-success" href="{{ path('app_realisation_new') }}" title="créer une nouvelle réalisation">Créer une nouvelle</a>
-	</div>
+{% include 'message/index.html.twig' %}
+{% include 'realisation/_footer.html.twig' %}
+
 
 {% endblock %}
