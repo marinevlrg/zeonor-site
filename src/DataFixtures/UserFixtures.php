@@ -13,16 +13,12 @@ class UserFixtures extends Fixture
 
     public const USER_INFOS = [
         [
-            'firstname' => 'Marine',
-            'lastname' => 'VALORGE',
             'email' => 'marine@zeonor.com',
-            'pass' => 'mdpadmin'
+            'password' => 'mdpadmin'
         ],
         [
-            'firstname' => 'Sylvie',
-            'lastname' => 'ZANARDO',
             'email' => 'sylvie@zeonor.com',
-            'pass' => 'mdpadmin'
+            'password' => 'mdpadmin'
         ],
     ];
 
@@ -40,12 +36,10 @@ class UserFixtures extends Fixture
             self::$userIndex++;
             $user = new User();
             $user->setEmail($userInfo['email']);
-            $user->setFirstname($userInfo['firstname']);
-            $user->setLastname($userInfo['lastname']);
 
             $hashedPassword = $this->passwordHasher->hashPassword(
                 $user,
-                $userInfo['pass']
+                $userInfo['password']
             );
             $user->setPassword($hashedPassword);
 
