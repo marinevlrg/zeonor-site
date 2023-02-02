@@ -5,6 +5,13 @@
     justify-content: center;
 }
 
+.navbarLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .navlink {
     color: var(--color-lightcyan);
     text-decoration: none;
@@ -16,6 +23,3 @@
     color: var(--color-middlebluegreen);
 }
 
-.navlink:active {
-    color: var(--color-vividtangerine);
-}
