@@ -1,0 +1,28 @@
+.card {
+    position:static;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.savoirs {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    align-items: start;
+    margin: 2rem
+}
+
+.card-body {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+@media (min-width: 920px) {
+
+.savoirs {
+    grid-template-columns: repeat(3, 1fr);
+    }
+}

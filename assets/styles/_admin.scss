@@ -1,0 +1,30 @@
+.adminBtn {
+   background-color: var(--color-irresistible);
+   border-color: var(--color-irresistible);
+   --bs-btn-color: white;
+   --bs-btn-hover-bg: var(--background-color-vividtrangerine);
+   --bs-btn-hover-color: white;
+}
+
+.navbar .container-fluid {
+   background-color: var(--color-irresistible);
+
+}
+
+.nav-link {
+   color: var(--color-lightcyan);
+}
+
+.nav-link:hover {
+   color: var(--background-color-middlebluegreen);
+}
+
+.collapse {
+   color: var(--color-lightcyan);
+
+}
+
+
+h1 {
+   margin-top: 2rem;
+}

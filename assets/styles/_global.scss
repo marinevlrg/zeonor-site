@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&family=Satisfy&display=swap');
+
+html,
+body {
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    background-color: var(--background-color-cultured);
+}
+
+main {
+    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.bg-image-40vh {
+    margin-top: 20px;
+    position: relative;
+    height: 40vh;
+    background-image: url('../images/leather-green-texture.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+.bg-image-validation {
+    margin-top: 20px;
+    position: relative;
+    height: 50vh;
+    background-image: url('../images/leather-red-texture.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--color-lightcyan);
+}
+
+form {
+    background-image: url('../images/leather-green-texture.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.h1accueil {
+    color: var(--color-lightgray);
+    font-family: 'Satisfy';
+}
+
+.h2titrepage {
+    text-align: center;
+    color: var(--color-pansypurple);
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Satisfy';
+}
+
+.h2validation {
+    text-align: center;
+    color: var(--color-vividtangerine);
+    font-size: 2.5rem;
+    padding: 2rem;
+}
+
+h5 {
+    margin-bottom: 2rem;
+}
+
+.bouton {
+    background-color: var(--color-pansypurple);
+    color: var(--color-middlebluegreen);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    font-size: large;
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
+
+.bouton:hover {
+    background-color: var(--color-middlebluegreen);
+    color: var(--color-pansypurple);
+    border: none;
+    padding: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    font-size: large;
+}
+
+.portefolio {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 1000px) {
+    .portefolio {
+        margin-left: 8rem;
+        margin-right: 8rem;
+    }
+
+    main {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1400px) {
+    .portefolio {
+        margin-left: 15rem;
+        margin-right: 15rem;
+    }
+}

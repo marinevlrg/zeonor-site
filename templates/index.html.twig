@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="bg-image-40vh d-flex align-items-center">
+		<h1 class="h1accueil text-center">
+			« La beauté commence au moment où l’on décide d’être soi-même. »
+			<br>
+			<strong>Coco Chanel</strong>
+		</h1>
+	</div>
+	<h2 class="h2titrepage mt-5 p-3">Savoirs faire</h2>
+	<div class="savoirs mb-5">
+		<div class="card h-100">
+			<img src="{{ asset('build/images/maroquinerie.jpg') }}" class="card-img-top" alt="...">
+			<div class="card-body d-flex flex-column h-100">
+				<h5 class="card-title">Maroquinerie</h5>
+				<p class="card-text">Le cuir n’est pas qu’une matière, le cuir est présent dans nos vies depuis des décennies.</p>
+				<p class="card-text">Qu'il soit utilisé par touche ou en totalité sur une pièce de mode, le cuir est noble et chaleureux.</p>
+			</div>
+		</div>
+		<div class="card h-100">
+			<img src="{{ asset('build/images/crochet.jpg') }}" class="card-img-top" alt="...">
+			<div class="card-body d-flex flex-column h-100">
+				<h5 class="card-title">Crochet</h5>
+				<p class="card-text">Le crochet permet de créer des pièces uniques et originales.</p>
+				<p class="card-text">Pour offrir un cadeau original et unique à un chéri(e), à un ami(e) ou à un(e) collègue, pourquoi pas une pièce crochetée qui lui plaira. Il appréciera sans doute l’idée !</p>
+			</div>
+		</div>
+		<div class="card h-100">
+			<img src="{{ asset('build/images/couture.jpg') }}" class="card-img-top" alt="...">
+			<div class="card-body d-flex flex-column h-100">
+				<h5 class="card-title">Couture</h5>
+				<p class="card-text">Tout cela dépend de mon Mojo du moment ! Et également du vôtre ;)</p>
+				<p class="card-text">Le couture est une passion où les possibilités sont illimitées, alors laissons libre cours à notre imagination.</p>
+			</div>
+		</div>
+	</div>
+	<div class="portefolio">
+		<h2 class="h2titrepage mt-5 mb-2">Quelques réalisations</h2>
+		<div id="carouselExample" class="carousel slide">
+			<div class="carousel-inner mt-5">
+				<div class="carousel-item active">
+					<img src="/assets/images/sacvoyage.jpg" class="rounded mx-auto d-block w-100" alt="...">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</div>
+{% endblock %}

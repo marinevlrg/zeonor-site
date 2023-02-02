@@ -1,0 +1,28 @@
+.navbar {
+    background-color: var(--color-irresistible);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* .navbarLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.navlink {
+    color: var(--color-lightcyan);
+    text-decoration: none;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.navlink:hover {
+    color: var(--color-middlebluegreen);
+}
+
+.navlink:active {
+    color: var(--color-vividtangerine);
+}
